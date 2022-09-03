@@ -118,10 +118,10 @@ def colisions():
     fr = fire.rect
     
     global pontos
-    if  drg.colliderect(obj_rect) or obj_rect.x == 60:
+    if drg.colliderect(obj_rect) or obj_rect.x == 60:
         pontos -= 1
         return True
-    elif  fr.colliderect(obj_rect):
+    elif fr.colliderect(obj_rect):
         pontos += 1
         return True
     else:
@@ -151,7 +151,7 @@ while rodando:
     
     # perseguição
     if pos_obj_x != pox:
-        pos_obj_x -= 3  + (10 % pontos)
+        pos_obj_x -= 3 + (10 % pontos)
         if pos_obj_y > poy:
             pos_obj_y -= 1 + (pontos% 10)
         elif pos_obj_y < poy:
